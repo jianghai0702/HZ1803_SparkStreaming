@@ -24,10 +24,10 @@ public class CollectLog10 {
        //这个地方和1.0X之前的版本有不一样的，这个是使用kafkaproducer 类来实例化
        Producer<String, String> producer = new KafkaProducer<String, String>(prop);
        try {
-           BufferedReader bf = new BufferedReader(new FileReader(new File("C:\\Users\\jiang\\Desktop\\Spark项目\\hz1803_spark\\src\\main\\resources\\cmcc2.json")));// 路径
+           BufferedReader bf = new BufferedReader(new FileReader(new File("C:\\Users\\jiang\\Desktop\\Spark项目\\hz1803_spark\\src\\main\\resources\\cmcc.json")));// 路径
            String line = null;
            while((line=bf.readLine())!=null){
-               //Thread.sleep(1000);
+               //Thread.sleep(500);
                producer.send(new ProducerRecord<String, String>("topic_cmcc_01", line));
            }
            bf.close();

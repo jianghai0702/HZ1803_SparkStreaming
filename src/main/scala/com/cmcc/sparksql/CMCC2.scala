@@ -15,7 +15,7 @@ object CMCC2 {
   // import spark.implicits._
   // import org.apache.spark.sql.functions._
   // spark.sparkContext.setCheckpointDir("C:\\checkpoint")
-  val kPATH = "C:\\Users\\jiang\\Desktop\\Spark项目\\hz1803_spark\\src\\main\\resources\\cmcc2.json"
+  val kPATH = "C:\\Users\\jiang\\Desktop\\Spark项目\\hz1803_spark\\src\\main\\resources\\cmcc.json"
   val spark = SparkSession.builder().appName("CMCC2").master("local[2]").getOrCreate()
   val dateformat = FastDateFormat.getInstance("yyyyMMddHHmmssSSS")
 
